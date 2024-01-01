@@ -26,6 +26,9 @@ body {
 	line-height: 1;
 	font-family: $fontFamily;
 	font-size: $fontSize;
+	font-weight: 500;
+	background-color: #2f4454;
+	@extend %hidescroll;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;

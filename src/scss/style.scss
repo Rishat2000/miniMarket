@@ -1,41 +1,84 @@
 @use "sass:math";
 
 // Підключення міксинів ===========================================================================================================================================================================================================================================================================
-@import "/src/scss/base/mixins";
-@import "/src/scss/base/forms/forms";
+@import "./base/mixins";
+@import "./base/forms/forms";
 
 // Підключення шрифтів ===========================================================================================================================================================================================================================================================================
 //&display=swap - додати при підключенні через плагін
-
-// Підключити, якщо є локальні файли шрифтів
-//@import "fonts/fonts";
-
-// Підключення іконкових шрифтів ==============================================================================================================================================================================================================================================================================
-// Підключити, якщо є файл іконкового шрифту
-//@import "fonts/icons";
-
-// ============================================================================================================================================================================================================================================================================================================================================================================================
-// Налаштування шаблону ============================================================================================================================================================================================================================================================================================================================================================================================
-// ============================================================================================================================================================================================================================================================================================================================================================================================
-
+@font-face {
+	font-family: "Univa Nova";
+	src: url("../fonts/UnivaNova-Regular.eot");
+	src:
+		url("../fonts/UnivaNova-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/UnivaNova-Regular.woff2") format("woff2"),
+		url("../fonts/UnivaNova-Regular.woff") format("woff"),
+		url("../fonts/UnivaNova-Regular.svg#UnivaNova-Regular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Univa Nova";
+	src: url("../fonts/UnivaNova-Medium.eot");
+	src:
+		url("../fonts/UnivaNova-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/UnivaNova-Medium.woff2") format("woff2"),
+		url("../fonts/UnivaNova-Medium.woff") format("woff"),
+		url("../fonts/UnivaNova-Medium.svg#UnivaNova-Medium") format("svg");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Univa Nova";
+	src: url("../fonts/UnivaNova-SemiBold.eot");
+	src:
+		url("../fonts/UnivaNova-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/UnivaNova-SemiBold.woff2") format("woff2"),
+		url("../fonts/UnivaNova-SemiBold.woff") format("woff"),
+		url("../fonts/UnivaNova-SemiBold.svg#UnivaNova-SemiBold") format("svg");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Univa Nova";
+	src: url("../fonts/UnivaNova-Bold.eot");
+	src:
+		url("../fonts/UnivaNova-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/UnivaNova-Bold.woff2") format("woff2"),
+		url("../fonts/UnivaNova-Bold.woff") format("woff"),
+		url("../fonts/UnivaNova-Bold.svg#UnivaNova-Bold") format("svg");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Univa Nova";
+	src: url("../fonts/UnivaNova-Heavy.eot");
+	src:
+		url("../fonts/UnivaNova-Heavy.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/UnivaNova-Heavy.woff2") format("woff2"),
+		url("../fonts/UnivaNova-Heavy.woff") format("woff"),
+		url("../fonts/UnivaNova-Heavy.svg#UnivaNova-Heavy") format("svg");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
 // За замовчуванням шрифт ==============================================================================================================================================================================================================================================================================
-$fontFamily: "";
-$fontSize: toRem(14); // де 14(px) - розмір шрифту за замовчуванням з макету
+$fontFamily: "Univa Nova";
+$fontSize: toRem(20); // де 14(px) - розмір шрифту за замовчуванням з макету
 
 // Основні кольори
-$mainColor: #000; // Колір шрифту за замовчуванням
-
-// Палітра кольорів
-// @import "base/colors-palette";
-
-// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
-
+$mainColor: #fff;
+$backgroundColor: #376e6f;
 // Мінімальна ширина сторінки
 $minWidth: 320;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1500;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
@@ -136,5 +179,33 @@ body {
 				padding: 0 toRem(math.div($containerPadding, 2));
 			}
 		}
+	}
+}
+
+@import "home.scss";
+
+[class*="-ibg"] {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+[class*="-ibg--contain"] {
+	img {
+		object-fit: contain;
+	}
+}
+
+%smoothscroll {
+	-webkit-overflow-scrolling: touch;
+}
+%hidescroll {
+	&::-webkit-scrollbar {
+		display: none;
 	}
 }
