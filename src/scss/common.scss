@@ -1,0 +1,145 @@
+.add {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #b8b9b9;
+	padding: 25px 45px;
+	border-radius: 25px;
+	display: none;
+}
+
+.add__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.add__container input {
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: none;
+	margin-bottom: 20px;
+}
+.add__container p {
+	margin: -15px 0 10px 0;
+	text-align: left;
+	color: red;
+}
+#close-image,
+#close-update {
+	cursor: pointer;
+}
+#photo,
+#updatePhoto {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 85%;
+	opacity: 0;
+	font-size: 0;
+	padding: 0;
+	cursor: pointer;
+}
+.add__file {
+	position: relative;
+}
+.add__photo {
+	display: inline-flex;
+	min-height: 40px;
+	border-radius: 30px;
+	justify-content: center;
+	align-items: center;
+	background-color: #494949;
+	padding: 0px 20px;
+	z-index: 22;
+	margin-bottom: 10px;
+}
+#addButton {
+	border-radius: 15px;
+	background-color: #eff309ab;
+	color: #333232;
+	padding: 15px 25px;
+	cursor: pointer;
+	transition: all 0.5s;
+	text-transform: uppercase;
+	font-weight: 600;
+	width: 100%;
+	overflow: hidden;
+}
+#addButton:hover {
+	background-color: #fbff00;
+	color: #333;
+}
+//========================================================================================================================================================
+.update {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #b8b9b9;
+	padding: 25px 45px;
+	border-radius: 25px;
+	display: none;
+}
+
+.update__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.update__container input {
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: none;
+	margin-bottom: 20px;
+}
+.update__container p {
+	margin: -15px 0 10px 0;
+	text-align: left;
+	color: red;
+}
+#close-update {
+	cursor: pointer;
+}
+#updatePhoto {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 85%;
+	height: 50%;
+	opacity: 0;
+	font-size: 0;
+	cursor: pointer;
+}
+.update__file {
+	position: relative;
+}
+.update__photo {
+	display: inline-flex;
+	min-height: 40px;
+	border-radius: 30px;
+	justify-content: center;
+	align-items: center;
+	background-color: #494949;
+	padding: 0px 20px;
+	z-index: 22;
+	margin-bottom: 10px;
+}
+.updateButton {
+	border-radius: 15px;
+	background-color: #eff309ab;
+	color: #333232;
+	padding: 15px 25px;
+	cursor: pointer;
+	transition: all 0.5s;
+	text-transform: uppercase;
+	font-weight: 600;
+	width: 100%;
+}
+.updateButton:hover {
+	background-color: #fbff00;
+	color: #333;
+}
