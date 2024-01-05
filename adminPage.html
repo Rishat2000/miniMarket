@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ADMIN</title>
+	</head>
+	<body>
+		<div class="admin">
+			<div class="admin__top">
+				<button type="button" class="admin__add">Add cart</button>
+			</div>
+			<ul class="admin__items admin-items">
+
+			</ul>
+		</div>
+		<form class="add">
+			<img src="./src/img/close.png" alt="close" id="close-image">
+			<div class="add__container">
+				<input type="text" id="name" placeholder="Product name">
+				<input type="text" id="subTitle" placeholder="Product sub-title">
+				<input type="number" id="price" placeholder="Product price">
+				<div class="add__file">
+					<input type="file" accept=".jpg, .png" id="photo">
+					<button type="button" class="add__photo">Choose image</button>
+				</div>
+			</div>
+			<button type="submit" id="addButton">Add cart</button>
+		</form>
+		<form class="update">
+			<img src="./src/img/close.png" alt="close" id="close-update">
+			<div class="update__container">
+				<input type="text" id="updateName" placeholder="Product name">
+				<input type="text" id="updateSubTitle" placeholder="Product sub-title">
+				<input type="number" id="updatePrice" placeholder="Product price">
+				<div class="update__file">
+					<input type="file" accept=".jpg, .png" id="updatePhoto">
+					<button type="button" class="update__photo">Choose image</button>
+				</div>
+			</div>
+			<button class="updateButton">Update cart</button>
+		</form>
+		<script type="module" src="./src/js/admin.js"></script>
+	</body>
+</html>

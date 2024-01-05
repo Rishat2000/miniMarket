@@ -6,7 +6,41 @@
 		<title>MINI MARKET</title>
 	</head>
 	<body>
-
-		<script type="module" src="/src/js/main.js"></script>
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo">Rishka</div>
+				<div class="header__func">
+					<form class="header__search">
+						<input type="text" class="header__input">
+						<button type="submit" class="header__button">
+							<img src="/src/img/icons/search.svg" alt>
+						</button>
+					</form>
+					<div class="header__body">
+						<div class="header__theme">
+							<button id="sun"><img src="/src/img/icons/sun.svg" alt="sun"></button>
+							<button id="moon"><img src="/src/img/icons/moon.svg" alt="moon"></button>
+						</div>
+						<button type="button" class="header__registration">Log in</butto>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="items">
+				<div class="items__container">
+					<ul class="items__cart cart-items"></ul>
+				</div>
+			</section>
+			<form class="login">
+				<div class="login__container">
+					<img src="./src/img/close.png" alt="close" id="close-login">
+					<input type="email" autocomplete="off" placeholder="Email..." class="login__email">
+					<input type="password" autocomplete="off" placeholder="Password..." class="login__password">
+					<button class="login__button">ZAYTI</button>
+				</div>
+			</form>
+		</main>
+		<script type="module" src="./src/js/main.js"></script>
 	</body>
 </html>
