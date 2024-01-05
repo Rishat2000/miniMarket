@@ -143,8 +143,6 @@ document.addEventListener("click", function (e) {
 		e.preventDefault();
 	});
 });
-
-
 function editCart(newObj, id) {
 	fetch(`${API}/${id}`, {
 		method: "PATCH",

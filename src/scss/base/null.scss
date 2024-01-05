@@ -42,6 +42,7 @@ textarea {
 	font-family: $fontFamily;
 	font-size: inherit;
 	line-height: inherit;
+	outline: none;
 }
 input[type="number"] {
 	-moz-appearance: textfield;

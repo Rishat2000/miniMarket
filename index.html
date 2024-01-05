@@ -29,27 +29,17 @@
 		<main class="main">
 			<section class="items">
 				<div class="items__container">
-					<div class="items__filter">
-						<div class="items__item">
-							<label class="items__title">
-								<input type="checkbox" class="items__input">
-								<span class="items__style"></span>
-								termo cups
-							</label>
-						</div>
-						<div class="items__item">
-							<label class="items__title">
-								<input type="checkbox" class="items__input">
-								<span class="items__style"></span>
-								simple cups
-							</label>
-						</div>
-					</div>
-					<ul class="items__cart cart-items">
-
-					</ul>
+					<ul class="items__cart cart-items"></ul>
 				</div>
 			</section>
+			<form class="login">
+				<div class="login__container">
+					<img src="./src/img/close.png" alt="close" id="close-login">
+					<input type="email" autocomplete="off" placeholder="Email..." class="login__email">
+					<input type="password" autocomplete="off" placeholder="Password..." class="login__password">
+					<button class="login__button">ZAYTI</button>
+				</div>
+			</form>
 		</main>
 		<script type="module" src="./src/js/main.js"></script>
 	</body>

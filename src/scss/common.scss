@@ -26,10 +26,6 @@
 	text-align: left;
 	color: red;
 }
-#close-image,
-#close-update {
-	cursor: pointer;
-}
 #photo,
 #updatePhoto {
 	position: absolute;
@@ -101,9 +97,6 @@
 	text-align: left;
 	color: red;
 }
-#close-update {
-	cursor: pointer;
-}
 #updatePhoto {
 	position: absolute;
 	top: 0;
@@ -142,4 +135,51 @@
 .updateButton:hover {
 	background-color: #fbff00;
 	color: #333;
+}
+//========================================================================================================================================================
+.login {
+	display: none;
+	&__container {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #b8b9b9;
+		padding: 25px 45px;
+		border-radius: 25px;
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(15);
+	}
+	&__email {
+	}
+	&__password {
+	}
+	&__email,
+	&__password {
+		padding: toRem(15) toRem(10);
+		border-radius: toRem(18);
+	}
+	&__button {
+		padding: toRem(15) toRem(10);
+		border-radius: toRem(18);
+		background-color: #fbff009b;
+		color: #333;
+		transition: background-color 0.3s;
+		font-weight: 600;
+		&:hover {
+			background-color: #fbff00;
+		}
+	}
+}
+
+#close-image,
+#close-update,
+#close-login {
+	cursor: pointer;
+}
+
+#close-login {
+	width: toRem(15);
+	height: toRem(15);
 }
